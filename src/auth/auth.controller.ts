@@ -1,13 +1,15 @@
 import { Body, Controller, Get, Post, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
-@Controller('auth')
+@Controller('/auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post()
+  // 로그인
+  @Post('/login')
   loginUser(@Req() req: Request, @Body() Body) {}
 
-  @Get()
+  // 로그아웃
+  @Get('/logout')
   logoutUser() {}
 }

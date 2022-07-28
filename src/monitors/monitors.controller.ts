@@ -1,7 +1,7 @@
 import { MonitorsService } from './monitors.service';
 import { Body, Controller, Get, Req } from '@nestjs/common';
 
-@Controller('monitors')
+@Controller('/monitors')
 export class MonitorsController {
   constructor(private readonly monitorsService: MonitorsService) {}
 
